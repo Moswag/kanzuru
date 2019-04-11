@@ -15,6 +15,9 @@ class CreateCompalaintsTable extends Migration
     {
         Schema::create('compalaints', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('phonenumber');
+            $table->string('complain');
+            $table->string('location');
             $table->timestamps();
         });
     }

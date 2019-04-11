@@ -7,11 +7,11 @@ use Illuminate\Http\Request;
 
 class LocationController extends Controller
 {
-    function index(){
-        return view('admin.add_location');
+    function addLocation(){
+        return view('admin.location.add_location');
     }
 
-    function addLocation(Request $request){
+    function saveLocation(Request $request){
         $location=new Location();
         $location->name=$request->name;
         $location->addBy=auth()->user()->employee_id;
@@ -25,13 +25,19 @@ class LocationController extends Controller
 
     function viewLocations(){
         $locations=Location::all();
-        return view('view_locations',compact('locations'));
+        return view('admin.location.view_locations',compact('locations'));
     }
 
-    function editLocation(Request $request,$id){
-        $location=Location::where('id',$id)->update([
+    function editLocation($id){
+        $location=Location::find($id);
+        return view('admin.location.edit_location',compact('location'));
+
+    }
+
+    function updateLocation(Request $request){
+        $location=Location::where('id',$request->id)->update([
             'name'=>$request->name,
-            'addedBy'=>auth()->user()->employee_id
+            'addBy'=>auth()->user()->employee_id
         ]);
         if($location){
             return redirect()->route('view_locations')->with('message','Location successfully updated');

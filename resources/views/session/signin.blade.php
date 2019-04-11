@@ -42,15 +42,21 @@
     <div class="login-register" style="background-image:url(assets/images/harare.png);">
         <div class="login-box card">
             <div class="card-body">
-                <form class="form-horizontal form-material" id="loginform" action="https://wrappixel.com/demos/admin-templates/material-pro/material/index.html">
+                @if(Session::has('message'))
+                    <div class="alert-success">{{Session::get('message')}}</div>
+                    @elseif(Session::has('error'))
+                    <div class="alert-danger">{{Session::get('error')}}</div>
+                    @endif
+                <form class="form-horizontal form-material" id="loginform" method="post" action="{{route('signin')}}">
+                    {{csrf_field()}}
                     <h3 class="box-title m-b-20">City Of Harare Sign In</h3>
                     <div class="form-group ">
                         <div class="col-xs-12">
-                            <input class="form-control" type="text" required="" placeholder="Employee Id"> </div>
+                            <input class="form-control" type="text" required="" placeholder="Employee Id" name="employee_id"> </div>
                     </div>
                     <div class="form-group">
                         <div class="col-xs-12">
-                            <input class="form-control" type="password" required="" placeholder="Password"> </div>
+                            <input class="form-control" type="password" required="" placeholder="Password" name="password"> </div>
                     </div>
                     <div class="form-group">
                         <div class="d-flex no-block align-items-center">
@@ -58,9 +64,7 @@
                                 <input id="checkbox-signup" type="checkbox">
                                 <label for="checkbox-signup"> Remember me </label>
                             </div>
-                            <div class="ml-auto">
-                                <a href="javascript:void(0)" id="to-recover" class="text-muted"><i class="fa fa-lock m-r-5"></i> Forgot pwd?</a>
-                            </div>
+
                         </div>
                     </div>
                     <div class="form-group text-center m-t-20">
@@ -69,29 +73,9 @@
                         </div>
                     </div>
 
-                    <div class="form-group m-b-0">
-                        <div class="col-sm-12 text-center">
-                            Don't have an account? <a href="pages-register.html" class="text-info m-l-5"><b>Sign Up</b></a>
-                        </div>
-                    </div>
+
                 </form>
-                <form class="form-horizontal" id="recoverform" action="https://wrappixel.com/demos/admin-templates/material-pro/material/index.html">
-                    <div class="form-group ">
-                        <div class="col-xs-12">
-                            <h3>Recover Password</h3>
-                            <p class="text-muted">Enter your Email and instructions will be sent to you! </p>
-                        </div>
-                    </div>
-                    <div class="form-group ">
-                        <div class="col-xs-12">
-                            <input class="form-control" type="text" required="" placeholder="Email"> </div>
-                    </div>
-                    <div class="form-group text-center m-t-20">
-                        <div class="col-xs-12">
-                            <button class="btn btn-primary btn-lg btn-block text-uppercase waves-effect waves-light" type="submit">Reset</button>
-                        </div>
-                    </div>
-                </form>
+
             </div>
         </div>
     </div>

@@ -1,3 +1,3 @@
 <footer class="footer">
-    © 2019 Material Pro Admin by wrappixel.com
+    © 2019 Kanzuru System Developed By Rumbidzai
 </footer>
