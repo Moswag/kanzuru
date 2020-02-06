@@ -15,12 +15,13 @@ class CreateResidentsTable extends Migration
     {
         Schema::create('residents', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('user_id');
             $table->string('name');
             $table->string('national_id');
             $table->string('gender');
             $table->string('phonenumber');
             $table->string('house_number');
-            $table->string('location');
+            $table->string('location_id');
             $table->timestamps();
         });
     }

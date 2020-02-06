@@ -18,7 +18,7 @@
                          <!-- dark Logo text -->
 
                 <!-- Light Logo text -->
-                         <img src="{{URL::to('assets/images/cityofharare.png')}}" class="light-logo" alt="homepage" height="70"/></span> </a>
+                         <img src="{{URL::to('assets/images/council.png')}}" class="light-logo" alt="homepage" height="70"/></span> </a>
     </div>
     <!-- ============================================================== -->
     <!-- End Logo -->
@@ -38,7 +38,7 @@
         <!-- ============================================================== -->
         <ul class="navbar-nav my-lg-0">
 
-            </li>
+
             <!-- ============================================================== -->
             <!-- End Comment -->
             <!-- ============================================================== -->
@@ -48,6 +48,11 @@
             <li class="nav-item dropdown">
 
             </li>
+            @if(auth()->user()->access==\App\AppConstants::ACCESS_RESIDENT)
+            0 litres
+            @endif
+
+
             <!-- ============================================================== -->
             <!-- End Messages -->
             <!-- ============================================================== -->
@@ -64,6 +69,7 @@
                                 <div class="u-text">
                                     <h4>{{auth()->user()->name}}</h4>
 
+                            </div>
                             </div>
                         </li>
                         <li role="separator" class="divider"></li>

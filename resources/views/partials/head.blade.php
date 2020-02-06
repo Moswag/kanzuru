@@ -6,7 +6,7 @@
 <meta name="author" content="">
 <!-- Favicon icon -->
 <link rel="icon" type="image/png" sizes="16x16" href="{{URL::to('assets/images/favicon.png')}}">
-<title>City Of Harare</title>
+<title>City Council</title>
 <!-- Bootstrap Core CSS -->
 <link href="{{URL::to('assets/plugins/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
 <!-- Custom CSS -->

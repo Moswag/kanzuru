@@ -49,10 +49,14 @@
                     @endif
                 <form class="form-horizontal form-material" id="loginform" method="post" action="{{route('signin')}}">
                     {{csrf_field()}}
-                    <h3 class="box-title m-b-20">City Of Harare Sign In</h3>
+                    <div class="col-xs-12">
+                    <img src="{{URL::to('assets/images/council.png')}}" class="light-logo"  style="display: block;
+                         margin-left: auto;
+                         margin-right: auto;
+                         width: 40%;" alt="kanzuru"/>
                     <div class="form-group ">
                         <div class="col-xs-12">
-                            <input class="form-control" type="text" required="" placeholder="Employee Id" name="employee_id"> </div>
+                            <input class="form-control" type="text" required="" placeholder="Username" name="username"> </div>
                     </div>
                     <div class="form-group">
                         <div class="col-xs-12">

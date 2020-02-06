@@ -30,9 +30,9 @@
                                     <thead>
                                     <tr>
                                         <th>Name</th>
+                                        <th>Surname</th>
                                         <th>Employee ID</th>
-                                        <th>National ID</th>
-                                        <th>Address</th>
+                                        <th>Phonenumber</th>
                                         <th>Action</th>
                                     </tr>
                                     </thead>
@@ -40,12 +40,12 @@
                                     @foreach($users as $user)
                                     <tr>
                                         <td>{{$user->name}}</td>
+                                        <td>{{$user->surname}}</td>
                                         <td>{{$user->employee_id}}</td>
-                                        <td>{{$user->national_id}}</td>
-                                        <td>{{$user->address}}</td>
+                                        <td>{{$user->phonenumber}}</td>
                                         <td>
-                                            <a href="{{route('edit_user',['id'=>$user->id])}}" class="alert-info">Edit</a>&nbsp;
-                                            <a href="{{route('delete_user',['id'=>$user->id])}}" class="alert-danger">Delete</a>
+                                            <a href="{{route('edit_user',['id'=>$user->id])}}" class="btn btn-info">Edit</a>&nbsp;
+                                            <a href="{{route('delete_user',['id'=>$user->id])}}" class="btn btn-danger">Delete</a>
                                         </td>
 
                                     </tr>

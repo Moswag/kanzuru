@@ -6,7 +6,7 @@
             <h3 class="text-themecolor m-b-0 m-t-0">User</h3>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
-                <li class="breadcrumb-item active">Add User</li>
+                <li class="breadcrumb-item active">Add Council  User</li>
             </ol>
         </div>
     </div>
@@ -22,7 +22,7 @@
         <div class="col-lg-12">
             <div class="card card-outline-info">
                 <div class="card-header">
-                    <h4 class="m-b-0 text-white">Add Admin</h4>
+                    <h4 class="m-b-0 text-white">Add Council User</h4>
                 </div>
                 <div class="card-body">
                     <form action="{{route('save_user')}}" method="post" class="form-horizontal">
@@ -31,9 +31,24 @@
                             <h3 class="box-title">User Info</h3>
                             <hr class="m-t-0 m-b-40">
                             <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group row">
+                                        <label class="control-label text-right col-md-2">Council</label>
+                                        <div class="col-md-10">
+                                            <select type="text" class="form-control" placeholder="Chose council" name="council">
+                                                @foreach($councils as $council)
+                                                    <option value="{{$council->id}}">{{$council->name}}</option>
+                                                    @endforeach
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group row">
-                                        <label class="control-label text-right col-md-3">Full Name</label>
+                                        <label class="control-label text-right col-md-3">Name</label>
                                         <div class="col-md-9">
                                             <input type="text" class="form-control" placeholder="Name" name="name">
                                              </div>
@@ -42,9 +57,9 @@
                                 <!--/span-->
                                 <div class="col-md-6">
                                     <div class="form-group row">
-                                        <label class="control-label text-right col-md-3">Employee ID</label>
+                                        <label class="control-label text-right col-md-3">Surname</label>
                                         <div class="col-md-9">
-                                            <input type="text" class="form-control" placeholder="Employee ID" name="employee_id">
+                                            <input type="text" class="form-control" placeholder="Surname" name="surname">
                                              </div>
                                     </div>
                                 </div>
@@ -55,17 +70,17 @@
 
                                 <div class="col-md-6">
                                     <div class="form-group row">
-                                        <label class="control-label text-right col-md-3">National ID</label>
+                                        <label class="control-label text-right col-md-3">Employee ID</label>
                                         <div class="col-md-9">
-                                            <input type="text" class="form-control" placeholder="national ID" name="national_id">
+                                            <input type="text" class="form-control" placeholder="Employee ID" name="employee_id">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group row">
-                                        <label class="control-label text-right col-md-3">Address</label>
+                                        <label class="control-label text-right col-md-3">Phonenumber</label>
                                         <div class="col-md-9">
-                                            <input type="text" class="form-control" placeholder="Address" name="address">
+                                            <input type="text" class="form-control" placeholder="Phonenumber" name="phonenumber">
                                            </div>
                                     </div>
                                 </div>

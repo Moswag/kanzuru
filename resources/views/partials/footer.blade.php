@@ -1,3 +1,3 @@
 <footer class="footer">
-    © 2019 Kanzuru System Developed By Rumbidzai
+    © {{date('Y')}} Kanzuru System Developed By Michelle
 </footer>
