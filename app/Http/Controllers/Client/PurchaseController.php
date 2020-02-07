@@ -17,7 +17,7 @@ class PurchaseController extends Controller
     }
 
     public function viewPurchases(){
-        $transactions=Transaction::all();
+        $transactions=Transaction::where('user_id',auth()->user()->id)->get();
         return view('resident.payment.view_transactions',compact('transactions'));
     }
 }

@@ -2,43 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7a749c33-6723-4675-8ade-da7836b4153e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/kanzuru.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/kanzuru.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminComplainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminComplainController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ComplaintController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Client/ComplaintController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LocationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Council/LocationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/NotificationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Council/NotificationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ReportController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Council/ReportController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ResidentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Council/ResidentController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/AppConstants.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AppConstants.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Client/ComplaintController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Client/ComplaintController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Client/PurchaseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Client/PurchaseController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Payments/PaynowController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Payments/PaynowController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_04_08_184145_create_residents_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_04_08_184145_create_residents_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_04_08_184232_create_compalaints_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_04_08_184232_create_compalaints_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_04_08_184918_create_locations_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_04_08_184918_create_locations_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_04_11_093342_create_notifications_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_04_11_093342_create_notifications_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/location/add_location.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/council/location/add_location.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/location/edit_location.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/council/location/edit_location.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/location/view_locations.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/council/location/view_locations.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/notification/add_notification.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/council/notification/add_notification.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/notification/view_notifications.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/council/notification/view_notifications.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/report/report.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/council/report/report.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/resident/add_resident.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/council/resident/add_resident.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/resident/edit_resident.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/council/resident/edit_resident.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/resident/view_residents.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/council/resident/view_residents.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/user/add_user.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/user/add_user.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/user/edit_user.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/user/edit_user.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/user/view_users.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/user/view_users.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/complain/add_complain.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/council/complain/add_complain.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/partials/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/footer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/partials/head.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/head.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_01_27_133544_create_transactions_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_01_27_133544_create_transactions_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/partials/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/header.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/partials/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/session/signin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/session/signin.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/resident/payment/view_transactions.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/resident/payment/view_transactions.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -214,6 +188,7 @@
       <workItem from="1580127302914" duration="284000" />
       <workItem from="1580127603936" duration="9407000" />
       <workItem from="1580782737717" duration="8688000" />
+      <workItem from="1581079954439" duration="4578000" />
     </task>
     <servers />
   </component>
@@ -237,17 +212,17 @@
       <screen x="0" y="0" width="1366" height="732" />
     </state>
     <state x="418" y="179" key="NewPhpClassDialog/0.0.1366.732@0.0.1366.732" timestamp="1580066641020" />
-    <state x="501" y="290" key="NewPhpFileDialog" timestamp="1580790545029">
+    <state x="501" y="290" key="NewPhpFileDialog" timestamp="1581080663037">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
-    <state x="501" y="290" key="NewPhpFileDialog/0.0.1366.732@0.0.1366.732" timestamp="1580790545029" />
+    <state x="501" y="290" key="NewPhpFileDialog/0.0.1366.732@0.0.1366.732" timestamp="1581080663037" />
     <state x="180" y="0" width="1005" height="736" key="SettingsEditor" timestamp="1580127589595">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
     <state x="180" y="0" width="1005" height="736" key="SettingsEditor/0.0.1366.732@0.0.1366.732" timestamp="1580127589595" />
-    <state x="362" y="193" key="com.intellij.ide.util.TipDialog" timestamp="1580782740204">
+    <state x="362" y="193" key="com.intellij.ide.util.TipDialog" timestamp="1581079999466">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
-    <state x="362" y="193" key="com.intellij.ide.util.TipDialog/0.0.1366.732@0.0.1366.732" timestamp="1580782740204" />
+    <state x="362" y="193" key="com.intellij.ide.util.TipDialog/0.0.1366.732@0.0.1366.732" timestamp="1581079999466" />
   </component>
 </project>

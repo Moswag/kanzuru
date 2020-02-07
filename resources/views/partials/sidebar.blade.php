@@ -84,6 +84,14 @@
                     </ul>
                 </li>
 
+                <li>
+                    <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-book-open-variant"></i><span class="hide-menu">Complain</span></a>
+                    <ul aria-expanded="false" class="collapse">
+                        <li><a href="{{route('complain')}}">Add Complain</a></li>
+                        <li><a href="{{route('view_res_complaints')}}">View Complains</a></li>
+                    </ul>
+                </li>
+
             @endif
 
         </ul>

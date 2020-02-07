@@ -2,10 +2,10 @@
 @section('pageHeader')
     <div class="row page-titles">
         <div class="col-md-5 col-8 align-self-center">
-            <h3 class="text-themecolor m-b-0 m-t-0">Transactions</h3>
+            <h3 class="text-themecolor m-b-0 m-t-0">Complaints</h3>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
-                <li class="breadcrumb-item active">View Transactions</li>
+                <li class="breadcrumb-item active">View Complaints</li>
             </ol>
         </div>
 
@@ -23,33 +23,24 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">Transactions</h4>
-                    <h6 class="card-subtitle">View Transactions</h6>
+                    <h4 class="card-title">Complaints</h4>
+                    <h6 class="card-subtitle">View Complaints</h6>
                     <div class="table-responsive m-t-40">
                         <table id="myTable" class="table table-bordered table-striped">
                             <thead>
                             <tr>
-                                <th>Phonenumber</th>
-                                <th>Amount</th>
+                                <th>Id</th>
+                                <th>Description</th>
                                 <th>Status</th>
-                                <th>Date</th>
 
                             </tr>
                             </thead>
                             <tbody>
-                            @foreach($transactions as $transaction)
+                            @foreach($complaints as $complaint)
                                 <tr>
-                                    <td>{{$transaction->instrument}}</td>
-                                    <td>{{$transaction->amount}}</td>
-                                    <td>
-                                        @if($transaction->paid==0)
-                                            Not Paid
-                                            @else
-                                            Paid
-                                            @endif
-                                        </td>
-                                    <td>{{$transaction->created_at}}</td>
-
+                                    <td>{{$complaint->id}}</td>
+                                    <td>{{$complaint->complain}}</td>
+                                    <td>{{$complaint->status}}</td>
 
                                 </tr>
                             @endforeach

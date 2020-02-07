@@ -14,8 +14,6 @@
 
 Route::group(['middleware'=>'guest'],function () {
     Route::get('/', 'AuthController@index')->name('index');
-    Route::get('/complain', 'ComplaintController@complain')->name('complain');
-    Route::post('/save_complain', 'ComplaintController@saveComplaint')->name('save_complain');
     Route::post('/login', 'AuthController@login')->name('signin');
 });
 
@@ -97,6 +95,10 @@ Route::group(['namespace' => 'Council','middleware'=>'auth'],function () {
 Route::group(['namespace' => 'Client','middleware'=>'auth'],function () {
     Route::get('/add_payment', 'PurchaseController@addPurchase')->name('add_payment');
     Route::get('/view_payments', 'PurchaseController@viewPurchases')->name('view_payments');
+
+    Route::get('/complain', 'ComplaintController@complain')->name('complain');
+    Route::post('/save_complain', 'ComplaintController@saveComplaint')->name('save_complain');
+    Route::get('/view_res_complaints', 'ComplaintController@viewResidentCompaints')->name('view_res_complaints');
 });
 
 

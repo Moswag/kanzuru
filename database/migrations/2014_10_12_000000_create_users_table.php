@@ -20,6 +20,7 @@ class CreateUsersTable extends Migration
             $table->boolean('isFirstTime');
             $table->string('status');
             $table->string('access');
+            $table->string('res_id');
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();

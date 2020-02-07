@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers\Api\Payments;
 
+use App\AppConstants;
 use App\Http\Controllers\Controller;
+use App\Resident;
+use App\ResidentAccount;
 use App\Transaction;
 use Exception;
 use Illuminate\Http\JsonResponse;
@@ -62,6 +65,7 @@ class PaynowController extends Controller
 
         // Set the user's phone as the transaction's instrument
         $transaction->instrument = $phone;
+        $transaction->user_id=auth()->user()->id;
         $transaction->save();
 
         // Check if transaction was created without any errors
@@ -93,6 +97,30 @@ class PaynowController extends Controller
             //  Attach poll url to the transaction
             $transaction->poll_url = $response->pollUrl();
             $transaction->save();
+
+            $resident=Resident::where('user_id',auth()->user()->id)->first();
+            //50l dollar
+
+
+            if(ResidentAccount::where('res_id',$resident->id)->exists()){
+                $acc=ResidentAccount::where('res_id',$resident->id)->first();
+                $litres= $amount * 50;
+                ResidentAccount::where('res_id',$resident->id)->update([
+                    'balance'=>$litres + $acc->balance,
+                    'status'=>AppConstants::STATUS_ACTIVE
+
+                ]);
+            }
+            else{
+                $litres= $amount * 50;
+                $account=new ResidentAccount();
+                $account->res_id=$resident->id;
+                $account->balance=$litres;
+                $account->status=AppConstants::STATUS_ACTIVE;
+                $account->save();
+            }
+
+
 
             // Return the response
 //            return response()->json([

@@ -16,4 +16,7 @@ class AppConstants
 
 
     const DEFAULT_PASSWORD = '12345678';
+
+    const STATUS_PENDING = 'Pending';
+    const STATUS_RESOLVED = 'Resolved';
 }

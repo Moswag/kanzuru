@@ -49,7 +49,7 @@
 
             </li>
             @if(auth()->user()->access==\App\AppConstants::ACCESS_RESIDENT)
-            0 litres
+            {{\App\ResidentAccount::where('res_id',auth()->user()->res_id)->first()->balance}} Litres
             @endif
 
 
